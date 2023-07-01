@@ -1,0 +1,17 @@
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+
+        int[] shuffledArray =  new int[2*n];
+
+        int index = 0;
+
+        for(int i=0 ; i<2*n ; i=i+2)
+        {
+            shuffledArray[i] = nums[index];
+            shuffledArray[i+1] = nums[index + n];
+            index++;
+        }
+        
+        return shuffledArray;
+    }
+}
