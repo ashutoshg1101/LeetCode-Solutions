@@ -1,0 +1,24 @@
+class Solution {
+    public boolean canBeEqual(int[] target, int[] arr) {
+        int[] freqCount = new int[1001];
+
+        for(int item : arr)
+        {
+            freqCount[item]++;
+        }
+
+        for(int item : target)
+        {
+            if(freqCount[item] == 0)
+            {
+                return false;
+            }
+            else
+            {
+                freqCount[item]--;
+            }
+        }
+
+        return true;
+    }
+}
